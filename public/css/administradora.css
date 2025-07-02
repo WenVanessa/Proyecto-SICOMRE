@@ -1,0 +1,149 @@
+.navbar {
+    margin-bottom: 20px;
+}
+
+.custom-nav {
+    background-color: #004085;
+}
+
+.custom-nav .navbar-nav .nav-item .nav-link {
+    color: #f4f6f9;
+}
+
+.custom-nav .navbar-nav .nav-item .nav-link:hover {
+    color: #e2e6ea;
+}
+
+.info-card {
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dcdcdc; /* Añadido borde para notar la división */
+    color: black;
+}
+
+.info-card h2 {
+    margin: 0;
+}
+
+.table {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    margin-bottom: 0;
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+.table thead th {
+    background-color: #0062cc;
+    color: white;
+    border-bottom: 2px solid #004085;
+}
+
+.table tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+.table td button {
+    margin: 0 5px;
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background-color: #0062cc;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #004085;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: black;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.botonesAdmin{
+    flex: 1;
+    color: white;
+    background-color: #0062cc;
+    margin: 20px;
+    width: 900px;
+    height: 200px;
+    border-radius: 20px;
+    display: flex; /* Hace que el contenedor del texto sea flex */
+    justify-content: center; /* Centra el texto horizontalmente */
+    padding: 20px; /* Aumenta el espacio interno */
+    line-height: 1.5; /* Ajusta el espacio entre líneas */
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    
+}
+
+.botonesAdmin2{
+    flex: 1;
+    color: black;
+    background-color: #fdf9c4;
+    margin: 20px;
+    width: 900px;
+    height: 200px;
+    border-radius: 20px;
+    display: flex; /* Hace que el contenedor del texto sea flex */
+    justify-content: center; /* Centra el texto horizontalmente */
+    padding: 20px; /* Aumenta el espacio interno */
+    line-height: 1.5; /* Ajusta el espacio entre líneas */
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    
+}
+
+.botonesAdmin2:hover{
+    text-decoration: none;
+}
+
+.botonesAdmin:hover{
+    text-decoration: none;
+    color: #fdf9c4 ;
+}
+
+.botonesAdmin2 img, .botonesAdmin img{
+    margin-top: 10px; /* Añade un poco de espacio entre el texto y la imagen */
+    width: 100px; /* Ajusta el tamaño de la imagen si es necesario */
+    height: 100px;
+}

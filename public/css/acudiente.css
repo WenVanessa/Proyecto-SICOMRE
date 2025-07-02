@@ -1,0 +1,197 @@
+
+/* General Styles */
+body {
+    
+    color: #333; /* Color del texto */
+    font-family: 'Arial', sans-serif; /* Fuente general */
+    margin: 0; /* Sin margen por defecto */
+    padding: 0; /* Sin padding por defecto */
+    position: relative; /* Necesario para el fondo en forma de carro */
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
+}
+
+/* Background with Car Shape */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj4KICA8cGF0aCBkPSJNNTAsMjAgTDEwMCw3MCIIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZS1oZWlnaHQ9IjEiLz4KPC9zdmc+'); /* SVG code for car shape */
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.2; /* Ajusta la opacidad para un efecto sutil */
+}
+
+/* Container Styles */
+.contenedor {
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Padding alrededor del contenido */
+}
+
+
+
+/* Main Section */
+main {
+    background-color: #fff; /* Fondo blanco para el contenido principal */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Padding alrededor del contenido */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Info Cards */
+.info-card {
+    background-color: #95c0f7; /* Fondo azul claro para las tarjetas de información */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Padding alrededor del contenido */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin-bottom: 20px; /* Margen inferior entre tarjetas */
+}
+
+.child-info-card {
+    background-color: #d1c4e9; /* Fondo morado claro para la tarjeta de información del hijo */
+}
+
+.driver-info-card {
+    background-color: #ffe0b2; /* Fondo naranja claro para la tarjeta de información del conductor */
+}
+
+.monitor-info-card {
+    background-color: #fdf9c4; /* Fondo amarillo claro para la tarjeta de información de la monitora */
+}
+
+/* Información del Hijo */
+.child-image {
+    width: 100%; /* Ancho completo de la imagen del hijo */
+    height: auto; /* Altura automática para mantener la proporción */
+    border-radius: 50%; /* Bordes redondeados para la imagen */
+    margin-bottom: 15px; /* Margen inferior de la imagen */
+}
+
+/* Información del Conductor y Monitora */
+.info-card h2 {
+    font-family: 'Archivo Black', sans-serif; /* Fuente para los títulos de las tarjetas */
+    font-size: 1.5rem; /* Tamaño de fuente del título */
+    color: #003366; /* Color del texto del título */
+    margin-bottom: 15px; /* Margen inferior del título */
+}
+
+.info-card p {
+    font-size: 1rem; /* Tamaño de fuente del texto */
+    color: #333; /* Color del texto */
+    margin-bottom: 10px; /* Margen inferior entre párrafos */
+}
+
+/* Mapa de Ruta */
+.map-card {
+    background-color: #e1bee7; /* Fondo lila claro para el mapa */
+}
+
+.map-image {
+    width: 100%; /* Ancho completo de la imagen del mapa */
+    height: auto; /* Altura automática para mantener la proporción */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Informe de Asistencia y Fallas */
+.report-card {
+    background-color: #ffebee; /* Fondo rojo claro para el informe de fallas */
+}
+
+.report-box {
+    background-color: #ffccbc; /* Fondo naranja claro para los recuadros de informe */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 15px; /* Padding alrededor del contenido del recuadro */
+    margin-bottom: 15px; /* Margen inferior entre los recuadros */
+}
+
+.report-box h3 {
+    font-size: 1.2rem; /* Tamaño de fuente del subtítulo */
+    color: #c62828; /* Color del texto del subtítulo */
+    margin-bottom: 10px; /* Margen inferior del subtítulo */
+}
+
+.status-present, .status-late {
+    font-weight: bold; /* Fuente en negrita */
+}
+
+.status-present {
+    color: green; /* Color verde para presencia */
+}
+
+.status-late {
+    color: orange; /* Color naranja para llegada a tiempo */
+}
+
+.faults-list {
+    list-style-type: disc; /* Estilo de lista con viñetas */
+    margin-left: 20px; /* Margen izquierdo para alinear la lista */
+    padding: 0; /* Sin padding por defecto */
+}
+
+.faults-list li {
+    margin-bottom: 10px; /* Margen inferior entre los ítems de la lista */
+}
+
+
+/* Vista del Acudiente */
+
+.info-box {
+    background-color: #fdf9c4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.info-box h3 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.6rem;
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+.info-box p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.info-box .btn {
+    font-size: 1rem;
+}
+
+/* Cambiar el color del título */
+.alertify .ajs-header {
+    background-color: #007bff; /* Azul */
+    color: white;
+}
+
+/* Cambiar el color del texto del contenido */
+.alertify .ajs-message {
+    color: #333;
+}
+
+/* Cambiar el color del botón de confirmación */
+.alertify .ajs-ok {
+    background-color: #28a745; /* Verde */
+    color: white;
+}
+
+/* Cambiar el color del botón de cancelación */
+.alertify .ajs-cancel {
+    background-color: #dc3545; /* Rojo */
+    color: white;
+}
+
+/* Cambiar el estilo del botón de confirmación */
+.alertify .ajs-ok, 
+.alertify .ajs-cancel {
+    border-radius: 5px;
+    border: none;
+}
+/**/
+
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sicomre</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Pacifico&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css"> <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="css/administradora.css">
+</head>
+<body>
+    <header></header>
+    <nav></nav>
+    <main>
+        <div style="display: flex; align-items: left;">
+            <img 
+                src="<%= user.Imagen %>"
+                onerror="this.onerror=null; this.src='img/sinfoto.jpg';"
+                alt="Imagen de perfil" 
+                style="width: 84px; height: 84px; border-radius: 50%; object-fit: cover; margin-right: 30px;" 
+            />
+            <div>
+                <h1 style="color: black; font-size: 26px; margin: 0;">Bienvenido/a</h1>
+                <h1 style="color: black; font-size: 26px; margin: 0;"><%= user.Nombres + ' ' + user.Apellidos %></h1>
+                <h1 style="color: black; font-size: 18px; margin: 0;"><%= user.Correo %></h1>
+            </div>
+        </div>
+        
+        <div class="contenedor">
+            
+            <a class="botonesAdmin2" href="/administrador-crud-administrador">Administrador <img src="img/adminicon.png" alt="yo soy un muppet"></a>
+            <a class="botonesAdmin" href="/administrador-crud-acudiente">Acudientes <img src="img/acudientsicon.png" alt="yo soy un muppet"> </a>
+            <a class="botonesAdmin2" href="/administrador-crud-conductor">Conductores <img src="img/busicono.png" alt="yo soy un muppet"> </a>
+            <a class="botonesAdmin" href="/administrador-crud-estudiantes">Estudiantes <img src="img/maletaicon.png" alt="yo soy un muppet"> </a>
+            <a class="botonesAdmin2" href="/administrador-crud-monitor">Monitores <img src="img/monitoresicon.png" alt="yo soy un muppet"> </a>
+            <a class="botonesAdmin" href="/administrador-crud-Ruta">Ruta <img src="img/mapaicono.png" alt="yo soy un muppet"> </a>
+            <a class="botonesAdmin2" href="/administrador-crud-autorizacion">Autorizaciones <img src="img/autoriza.png" alt="yo soy un muppet"> </a>
+        </div>   
+    </main>
+    <footer></footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="JS/script2.js"></script>
+    <script src="JS/administrador.js" ></script>
+   
+</body>
+</html>

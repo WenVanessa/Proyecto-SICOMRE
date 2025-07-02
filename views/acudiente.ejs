@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sicomre</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css"> <!-- Enlace al archivo CSS -->
+    
+    <link rel="stylesheet" href="css/acudiente.css">
+    <link rel="stylesheet" href="css/acudienteVen.css">
+</head>
+<body>
+    <input type="hidden" id="idUsuario" value="<%= user.IdUsuario %>" />
+    <header></header>
+    <nav></nav>
+    <main>
+        <div class="container">
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <img 
+                    src="<%= user.Imagen %>" 
+                    onerror="this.onerror=null; this.src='img/sinfoto.jpg';"
+                    alt="Imagen de perfil" 
+                    style="width: 84px; height: 84px; border-radius: 50%; object-fit: cover; margin-right: 10px;" 
+                />
+                <div>
+                    <h1 style="color: black; font-size: 26px; margin: 0;">Bienvenido/a</h1>
+                    <h1 style="color: black; font-size: 26px; margin: 0;"><%= user.Nombres + ' ' + user.Apellidos %></h1>
+                    <h1 style="color: black; font-size: 18px; margin: 0;"><%= user.Correo %></h1>
+                </div>
+            </div>
+            <br>
+            <p>Aquí puedes gestionar la información de tus hijos y revisar las rutas escolares.</p>
+            
+            
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="info-box">
+                        <h3>Mis Hijos</h3>
+                        <p>Consulta la información de sus hijos</p>
+                        <button class="btn" onclick="openModal('hijos')">Ver Información</button>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="info-box">
+                        <h3>Rutas, Monitores y Conductores</h3>
+                        <p>Aqui podra observar las rutas, monitoras y conductoras encargadas de su hijo</p>
+                        <button class="btn" onclick="openModal('rutas')">Ver Información</button>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="info-box">
+                        <h3>Novedades</h3>
+                        <p>Aqui podra observar las novedades que ocurran.</p>
+                        <button class="btn" onclick="openModal('novedades')">Ver Información</button>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="info-box">
+                        <h3>Autorización</h3>
+                        <p>Subir autorizacion si la requiere</p>
+                        <button class="btn" onclick="openModal('autorizacion')">Subir Autorización</button>
+                    </div>
+                </div>
+                <div id="modal" class="modal" style="display:none;">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <h2 id="modalTitle"></h2>
+                        <div id="modalBody"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="JS/script2.js"></script>
+    <script src="JS/acudiente.js"></script>
+</body>
+</html>

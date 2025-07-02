@@ -1,0 +1,83 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    color: #414141;
+}
+
+.card {
+    background: #00d2ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #3a7bd5, #00d2ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 10px;
+    box-shadow: 0 1px 50px #00a1c5;
+    width: 800px;
+    height: 630px;
+}
+
+.card-header {
+    background: #242b785d;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-content {
+    border-radius: 12px;
+    
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0px 0px 20px -18px;   
+    padding: 30px;  
+}
+
+.profile-info {
+    text-align: center;
+    margin-bottom: 1px;
+}
+
+.avatar {
+    width: 138px;
+    height: 138px;
+    border: 1px solid #1a237e; 
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: -20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: left;
+    background: #babef3;
+    border-radius: 8px;
+    margin: 6px 0;
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+    padding: 6px; 
+}
+
+.icon {
+    color: #1a237e; 
+    margin-top: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.label {
+    font-size: 12px;
+    color: #777;
+    margin-right: 100px; 
+    margin-top: 4px; 
+}
+
+.value {
+    font-size: 16px;
+    margin-top: -100px; 
+    margin: -6px; 
+    display: flex;
+    align-items: center;
+}
+ 

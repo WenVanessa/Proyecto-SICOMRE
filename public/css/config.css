@@ -1,0 +1,96 @@
+.card {
+    background: #00d2ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #3a7bd5, #00d2ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 10px;
+    box-shadow: 0 4px 40px #00a1c5;
+    width: 70%;
+    height: 60%;
+    max-width: 800px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-p {
+    padding: 10px;
+}
+
+.card-header {
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    border-radius: 12px;
+    border: 1.5px solid lightgrey;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0px 0px 20px -18px;  
+  }
+  
+.input:hover {
+    border: 2px solid lightgrey;
+    box-shadow: 0px 0px 20px -17px;
+}
+  
+.input:active {
+    transform: scale(0.95);
+}
+  
+.input:focus {
+    border: 2px solid grey;
+}
+
+
+.button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    
+}
+
+.avatar {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.grid {
+    display: flex;
+    justify-content: last baseline; /* Alinea los elementos con espacio entre ellos */
+    align-items: flex-end; /* Alinea los elementos al final verticalmente */
+    gap: 100px; /* Reduce el espacio entre elementos (ajusta según necesites) */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples filas */
+}
+
+.form-group {
+    margin-bottom: 8px; /* Espaciado más amplio */
+}
+
+label {
+    display: block;
+    margin-bottom: 7px; /* Espaciado más amplio */
+    font-size: 1rem; /* Tamaño de fuente legible */
+    color: #414141; /* Color oscuro para mejor contraste */
+    text-transform: capitalize; /* Capitaliza la primera letra */
+    transition: color 0.3s ease; /* Transición suave en color */
+}
+
+label:hover {
+    color: #3390f3; /* Color al pasar el mouse */
+}
+
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+

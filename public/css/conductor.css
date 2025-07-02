@@ -1,0 +1,159 @@
+/* Estilos generales */
+body {
+    font-family: 'Amatic SC', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #063780; /* Azul oscuro de fondo */
+    color: #fff; /* Texto blanco */
+    text-align: center;
+}
+
+/* Contenedor */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Encabezado */
+header {
+    background-color: #95c0f7; /* Azul claro */
+    border-radius: 20px;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-logo {
+    max-width: 150px;
+    margin-right: 20px;
+}
+
+.header-title {
+    text-align: left;
+}
+
+header h1 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 3.5rem;
+    color: #003366;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+header h2 {
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 1.8rem;
+    color: #002d72;
+    margin-bottom: 1rem;
+}
+
+/* Navegación */
+nav {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 0 auto 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    border-radius: 10px;
+    color: #003366;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0 15px;
+}
+
+.nav-link:hover {
+    background-color: #003366;
+    color: #fff;
+}
+
+/* Sección principal */
+main {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mapa */
+#map {
+    height: 400px; /* Altura específica para el mapa */
+    border: 2px solid #003366; /* Borde azul oscuro */
+    border-radius: 10px;
+    margin-bottom: 20px; /* Espacio inferior para separar del contenido */
+}
+
+/* Tarjetas de Información */
+.info-card {
+    background-color: #e0f7fa; /* Fondo azul claro para las tarjetas */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s; /* Efecto de hover */
+}
+
+.info-card:hover {
+    transform: scale(1.02); /* Efecto de zoom al pasar el ratón */
+}
+
+.info-card h2 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.5rem;
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+.info-card ul {
+    list-style: none; /* Eliminar viñetas */
+    padding: 0; /* Eliminar padding */
+}
+
+/* Pie de página */
+footer {
+    background-color: #95c0f7;
+    border-radius: 20px;
+    padding: 30px 20px;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.copyright {
+    color: #003366;
+}
+
+/* Animación de recogida */
+.fade-out {
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+/* Mejora de legibilidad de texto */
+.info-card p, .info-card li {
+    color: #333; /* Color del texto en tarjetas */
+}
+
+/* Espaciado entre elementos de la lista */
+.list-group-item {
+    margin-bottom: 10px;
+}
+.list-group-item-danger {
+    background-color: #f8d7da; /* Color de fondo para el estado de fallo */
+    color: #721c24; /* Color del texto para el estado de fallo */
+}
+

@@ -1,0 +1,151 @@
+/* Estilos generales */
+body {
+    font-family: 'Amatic SC', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #063780; /* Azul oscuro de fondo */
+    color: #fff; /* Texto blanco */
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Encabezado */
+header {
+    background-color: #95c0f7; /* Azul claro */
+    border-radius: 20px;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    display: flex; /* Cambia a flex para alinear elementos horizontalmente */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    justify-content: space-between;
+}
+
+
+.header-logo {
+    max-width: 150px;
+    margin-right: 0px; /* Espacio entre la imagen y el título */
+    
+}
+
+.header-title {
+    flex: 1;
+    text-align: center;
+}
+
+
+header h1 {
+    
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 3.5rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+    text-shadow: 3px 5px 5px blue;
+}
+
+header h2 {
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 1.8rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+
+/* Navegación */nav {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 0 auto 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  align-items: center; /* Centra verticalmente los elementos */
+  width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.nav-lindo {
+  display: flex;
+  /* No es necesario si el nav ya tiene display: flex */
+}
+
+
+.nav-link {
+    border-radius: 10px;
+    color: #003366;
+    font-weight: bold;
+    font-size: 1.2rem; /* Aumenta el tamaño de la fuente */
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0 15px; /* Ajusta el margen para una mejor distribución */
+}
+
+
+
+.imagen-del-nav{
+    width: 30px;
+    transition: all 0.3s ease;
+    
+}
+
+.one_nosotros a:hover{
+    background-color: #003366;
+    color: #fff;
+}
+
+.one_nosotros a:hover img{
+    filter: invert(100%);
+}
+
+
+/* Sección principal */
+main {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-container {
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Pie de página */
+footer {
+    background-color: #95c0f7;
+    border-radius: 20px;
+    padding: 30px 20px;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+ }
+
+.copyright {
+    color: #000;
+}
+
+.regresar {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.regresar i {
+    margin-right: 15px;
+}

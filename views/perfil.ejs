@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sicomre</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css"> <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="css/perfil.css">
+</head>
+<body>
+    <header></header>
+    <nav></nav>
+    <main>
+        <button class="regresar" onclick="window.location.href='/administrador'">
+            <i class="fas fa-home"></i> Regresar
+        </button>
+         
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Perfil del Administrador</h1>
+                </div>
+                <div class="card-content">
+                    <div class="profile-info">
+                        <img id="profile-pic" src="<%= user.Imagen %>" onerror="this.onerror=null; this.src='img/sinfoto.jpg';"alt="Foto del administrador" class="avatar">
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-user icon"></i>
+                        <div>
+                            <p class="label">Nombre completo</p>
+                            <p class="value"><%= user.Nombres + ' ' + user.Apellidos %></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-id-card icon"></i>
+                        <div>
+                            <p class="label">Identificación</p>
+                            <p class="value"><%= user.TipoIdentificacion + ': ' + user.NoIdentificacion %></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope icon"></i>
+                        <div>
+                            <p class="label">Correo</p>
+                            <p class="value"><%= user.Correo %></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone icon"></i>
+                        <div>
+                            <p class="label">Teléfono</p>
+                            <p class="value"><%= user.telefono %></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-user-circle icon"></i>
+                        <div>
+                            <p class="label">Usuario</p>
+                            <p class="value"><%= user.Usuario %></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-key icon"></i>
+                        <div>
+                            <p class="label">Contraseña</p>
+                            <p class="value">••••••••</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="JS/script2.js"></script>
+   
+</body>
+</html>

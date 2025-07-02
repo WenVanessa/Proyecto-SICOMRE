@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sicomre</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css"> <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="css/acudiente.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+     <!-- Default theme -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+         <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="css/acudiente.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .modal-body .mb-3 label {
+            text-align: left;
+            display: block;
+            width: 100%;
+        }
+        .fa-eye {
+            cursor: pointer;
+        }
+        body{
+            background-color: #063780;
+        }
+        .fila-inactiva { /* Clase para filas inactivas */
+            background-color: gray; /* Color de fondo gris */
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <nav></nav>
+    <main>
+        <!-- Registro de Monitoras -->
+        <section id="monitora" class="my-4">
+            <div class="info-card">
+                <input type="text" id="busqueda" placeholder="Buscar por nombre o correo" class="form-control mb-3">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h2><i class="fas fa-user-tie"></i> Registro de Monitoras</h2>
+                    <button id="btnCrearM" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalMonitora"><i class="fas fa-plus"></i> Registrar Monitora</button>
+                </div>
+                <table id="monitorTable" class="table">
+                    <thead>
+                        <tr>
+                            <th>Id Monitora</th>
+                            <th>Imagen</th>
+                            <th>Nombres</th>
+                            <th>Apellidos</th>
+                            <th>Tipo Identificación</th>
+                            <th>N.Identificación</th>
+                            <th>Teléfono</th>
+                            <th>Correo Electrónico</th>
+                            <th>Usuario</th>
+                            <th>Contraseña</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <!--Modal de Registro-->
+                <div id="modalMonitora" class="modal fade" tabindex="-1" aria-labelledby="modalMonitoraLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header bg-primary text-white">
+                                <h1 class="modal-title fs-5" id="modalMonitoraLabel">Registrar Monitora</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="formMonitora" enctype="multipart/form-data">
+                                    <div class="mb-3">
+                                        <label for="nombre" class="col-form-label">Nombre:</label>
+                                        <input id="nombre" name="nombre" type="text" class="form-control" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="apellidos" class="col-form-label">Apellidos:</label>
+                                        <input id="apellidos" name="apellidos" type="text" class="form-control" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="tipoIdentificacion" class="col-form-label">Tipo de Identificación:</label>
+                                        <select id="tipoIdentificacion" name="tipoIdentificacion" class="form-control" required>
+                                            <option value="" disabled selected>Seleccione una opción</option>
+                                            <option value="CC">C.C</option>
+                                            <option value="CE">C.E</option>
+                                            <option value="Pasaporte">Pasaporte</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="noIdentificacion" class="col-form-label">Número de Identificación:</label>
+                                        <input id="noIdentificacion" name="noIdentificacion" type="number" class="form-control" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="telefono" class="col-form-label">Teléfono:</label>
+                                        <input id="telefono" name="telefono" type="text" class="form-control" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="correo" class="col-form-label">Correo Electrónico:</label>
+                                        <input id="correo" name="correo" type="email" class="form-control" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="imagen" class="col-form-label">Imagen:</label>
+                                        <input id="imagen" name="imagen" type="file" class="form-control" accept="image/*"> <!-- Campo para la imagen -->
+                                    </div>
+                                    <div id="usuarioContainer" class="mb-3 d-none">
+                                        <label for="usuario" class="col-form-label">Usuario:</label>
+                                        <input id="usuario" name="usuario" type="text" class="form-control">
+                                    </div>
+                                    <div id="contraseñaContainer" class="mb-3 d-none position-relative">
+                                        <label for="contraseña" class="col-form-label">Contraseña:</label>
+                                        <input id="contraseña" name="contraseña" type="password" class="form-control">
+                                        <i id="togglePassword" class="fa fa-eye position-absolute" onclick="togglePassword()" style="right: 20px; top: 75%; transform: translateY(-50%);"></i>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                        <button type="submit" class="btn btn-primary">Guardar</button>
+                                    </div>
+                                </form>
+                            </div>                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Modal para mostrar la información detallada -->
+             <div class="modal fade" id="modalDetalle" class="modal fade" tabindex="-1" aria-labelledby="modalDetalleLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                            <h5 class="modal-title" id="modalDetalleLabel">Detalle del Acudiente</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        <div id="modalImagen">
+                            <img src="" alt="Imagen del Administrador" width="100" height="100">
+                        </div>
+                        <p><strong>Nombre:</strong> <span id="modalNombre"></span></p>
+                        <p><strong>Apellidos:</strong> <span id="modalApellidos"></span></p>
+                        <p><strong>Tipo de Identificación:</strong> <span id="modalTipoIdentificacion"></span></p>
+                        <p><strong>Número de Identificación:</strong> <span id="modalNoIdentificacion"></span></p>
+                        <p><strong>Teléfono:</strong> <span id="modalTelefono"></span></p>
+                        <p><strong>Correo:</strong> <span id="modalCorreo"></span></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer></footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <!--Alert-->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="JS/crudMScript.js"></script>
+    <script src="JS/script3.js"></script>
+</body>
+</html>
